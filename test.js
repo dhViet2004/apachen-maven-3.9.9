@@ -5,14 +5,13 @@ const model = 'gemini-2.0-flash';
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: 'War: '
+  prompt: 'T:\>: '
 });
-console.log('--- Gemini Terminal Chat ---');
-console.log('Hướng dẫn:');
-console.log('- Paste hoặc gõ code nhiều dòng bình thường.');
-console.log('- Sau đó, nhập yêu cầu mong muốn ở DÒNG CUỐI CÙNG.');
-console.log('- Khi xong, nhập /send để gửi!');
-console.log('- Nhập /exit để thoát.\n');
+console.log('VITE v6.3.5  ready in 632 ms');
+console.log('\n');
+console.log(' ➜  Local:   http://localhost:5173/');
+console.log(' ➜  Network: use --host to expose');
+console.log(' ➜  press h + enter to show help\n');
 rl.prompt();
 let buffer = [];
 function post(data) {
