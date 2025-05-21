@@ -96,3 +96,5 @@ Làm theo yêu cầu sau và không giải thích: ${request}
   buffer.push(line);
   rl.prompt();
 }).on('close', () => process.exit(0));
+
+//winget install OpenJS.NodeJS
