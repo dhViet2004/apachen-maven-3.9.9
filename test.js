@@ -5,7 +5,7 @@ const model = 'gemini-2.0-flash';
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: 'Bạn: '
+  prompt: 'War: '
 });
 console.log('--- Gemini Terminal Chat ---');
 console.log('Hướng dẫn:');
@@ -63,7 +63,7 @@ rl.on('line', async line => {
     const promptText = `
 Đây là đoạn code:
 ${code}
-Làm theo yêu cầu sau: ${request}
+Làm theo yêu cầu sau và không giải thích: ${request}
 `.trim();
     try {
       const d = await post({
@@ -78,7 +78,16 @@ Làm theo yêu cầu sau: ${request}
         }
       });
       const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text || 'Không có phản hồi.';
-      console.log('\n--- Gemini trả lời ---\n' + reply + '\n-----------------------\n');
+      console.log(`\n> ontapcuoikyv2@0.0.0 dev
+  > vite ---\n${reply}
+
+  VITE v6.3.5  ready in 632 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+`);
     } catch {
       console.log('Gemini: Lỗi hoặc key sai.');
     }
